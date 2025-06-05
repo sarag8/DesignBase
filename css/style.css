@@ -421,6 +421,12 @@ header a {
     gap: 30px;
   }
 
+  .card-contenitore {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  
   .torna-su {
     display: none;
   }
