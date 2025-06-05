@@ -220,12 +220,6 @@ header a {
   color: var(--grigio-testo);
 }
 
-.card-home-contenitore {
-  justify-content: space-between;
-  margin: 100px 0;
-}
-
-
 .card-contenitore {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 400px));
