@@ -203,31 +203,27 @@ header a {
   margin-bottom: 70px;
 }
 
-/* Card */
-.card {
-  max-width: 400px;
-}
-
-.card img {
-  max-width: 400px;
-  height: 400px;
-  margin-bottom: 10px;
-  object-fit: cover;
-}
-
-.card p {
-  margin-top: 13px;
-  color: var(--grigio-testo);
-}
-
-.card-contenitore {
+/* Carta */
+.contenitore-carte {
+  margin: auto;
+  max-width: 1324px;
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 400px));
-  gap: 80px 0;
-  justify-content: space-between;
-  border-top: 1px solid var(--nero);
-  margin-bottom: 100px;
-  padding-top: 50px;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: stretch;
+  row-gap: 60px;
+  margin-bottom: 80px;
+}
+
+.contenitore-carte .carta img {
+  width: 404px;
+  height: 404px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.contenitore-carte .carta a p {
+  padding-top: 15px;
+  color: var(--grigio-testo);
 }
 
 /* Footer */
@@ -286,9 +282,6 @@ header a {
 
   body, h1, h2, h3, h4, h5, p, ol, ul, a, h5 { color: var(--bianco); }
   .sezione-contenitore { border-top: 1px solid var(--bianco); }
-  .card p {
-    color: var(--grigio-testo);
-  }
 
   /*bordi delle list-card in sfondo-nero*/
   .list-card {
@@ -336,7 +329,6 @@ header a {
 .testo-header-chisiamo li:last-child a {
   color:var(--bianco) !important;
 }
-
 
 @media (max-width: 600px) {
   .contenitore-header {
@@ -410,17 +402,11 @@ header a {
 
   }
 
-  .card-home-contenitore {
-    align-items: center;
-    gap: 30px;
-  }
-
-  .card-contenitore {
-    display: grid;
+  .contenitore-carte {
     grid-template-columns: 1fr;
-    max-width: 400px;
+    row-gap: 60px;
+    margin-bottom: 80px;
   }
-
   
   .torna-su {
     display: none;
