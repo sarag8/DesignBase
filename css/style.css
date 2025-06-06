@@ -343,6 +343,11 @@ header a {
     margin: 0px 0px !important;
   }
 
+  h1 {
+    line-height: 1;
+    padding-bottom: 25px;
+  }
+
   header {
     align-items: center;
   }
@@ -359,10 +364,13 @@ header a {
   .sezione-contenitore {
     display: flex;
     flex-direction: column;
+    padding-top: 30px;
+    margin-top: 170px;
   }
 
   .sezione-contenitore h2 {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    line-height: 1.2;
   }
 
   .list-contenitore {
@@ -401,6 +409,7 @@ header a {
     }
 
   }
+
 
   .contenitore-carte {
     grid-template-columns: 1fr;
