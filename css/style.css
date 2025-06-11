@@ -7,6 +7,37 @@ header nav ul li a:hover {
   color: var(--rosa) !important;
 }
 
+/* Transizioni footer */
+.footer-testo a {
+  transition: all 0.3s ease;
+  display: inline-block; /* Necessario per le trasformazioni */
+}
+
+/* Hover per "Chi siamo" */
+.footer-testo-sezione h6:first-child a:hover {
+  transform: translateX(5px) scale(1);
+}
+
+/* Hover per "Torna su" */
+.torna-su a:hover {
+  transform: translateY(-5px) scale(1);
+}
+
+/* Stile base per torna su */
+.torna-su a {
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.carta img {
+  transition: all 0.3s ease;
+}
+
+.carta:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
 /* Reset e base */
 html {
   box-sizing: border-box;
@@ -105,7 +136,7 @@ header {
   background-color: transparent;
   display: flex;
   justify-content: space-between;
-  padding: 35px 0;
+  padding: 35px 10px;
 }
 
 header a {
@@ -454,5 +485,18 @@ header a {
 
   footer {
     font-size: 10px;
+  }
+
+    .categorie {
+    flex-wrap: wrap;
+    gap: 10px 8px;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  
+  .categorie h2 {
+    font-size: 16px;  /* Ancora più piccolo per stare in orizzontale */
+    flex: 0 0 auto;
+    line-height: 1.2;
   }
 }
