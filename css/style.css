@@ -7,10 +7,15 @@ header nav ul li a:hover {
   color: var(--rosa) !important;
 }
 
+.bottone:hover {
+    background-color: var(--nero);
+    color: var(--bianco); 
+}
+
 /* Transizioni footer */
 .footer-testo a {
   transition: all 0.3s ease;
-  display: inline-block; /* Necessario per le trasformazioni */
+  display: inline-block;
 }
 
 /* Hover per "Chi siamo" */
@@ -54,7 +59,7 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul, a {
   font-weight: normal;
   font-family: 'Poppins', sans-serif;
   text-decoration: none;
-  color: black; /* Colore di default per il testo */
+  color: black; 
 }
 
 body {
