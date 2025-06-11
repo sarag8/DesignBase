@@ -248,18 +248,13 @@ header a {
   justify-items: stretch;
   row-gap: 60px;
   margin-bottom: 80px;
+  gap: 20px;
 }
 
 .contenitore-carte .carta img {
-  width: 404px;
-  height: 404px;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-.contenitore-carte .carta a p {
-  padding-top: 15px;
-  color: var(--grigio-testo);
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover; 
 }
 
 /* Footer */
