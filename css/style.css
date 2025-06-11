@@ -289,8 +289,8 @@ header a {
   }
   .list-card:first-child,
   .list-card:nth-child(4),
-  .list-card:nth-child(7)
-  .list-card:nth-child(10)
+  .list-card:nth-child(7),
+  .list-card:nth-child(10),
   .list-card:nth-child(13) {
     border-left: none;
   }
@@ -340,9 +340,14 @@ header a {
   color: var(--bianco);
 }
 
-.block .categorie:hover {
+.categorie a:hover {
   color: var(--giallo) !important;
-  }
+  text-decoration: underline;
+  text-decoration-color: var(--giallo);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 7px;
+}
+
 
 @media (max-width: 600px) {
   .contenitore-header {
