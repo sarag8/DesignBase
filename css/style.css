@@ -104,6 +104,10 @@ p { font-size: 18px; font-weight: 400; text-align: left; text-wrap: pretty; }
   text-underline-offset: 7px;
 }
 
+.colore {
+  color: var(--grigio-testo);
+}
+
 .contenitore {
   max-width: 1324px;
   padding: 0 20px;
@@ -171,6 +175,10 @@ header a {
   max-width: 1100px;
   align-content: start;
   margin-bottom: 100px;
+}
+
+.testo-hero a {
+ font-size: 60px; font-family: 'EB Garamond', serif; line-height: 70px;
 }
 
 .paragrafo-hero {
@@ -339,7 +347,7 @@ header a {
 
 .grid-immagini-container {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 60px 20px;
   margin-bottom: 100px;
 }
