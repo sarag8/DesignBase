@@ -106,7 +106,7 @@ p { font-size: 18px; font-weight: 400; text-align: left; text-wrap: pretty; }
 
 .contenitore {
   max-width: 1324px;
-  padding: 0 10px;
+  padding: 0 20px;
   margin: auto;
 }
 
