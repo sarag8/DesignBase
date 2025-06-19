@@ -153,6 +153,7 @@ header a {
 }
 
 .contenitore-header {
+  gap: 20px;
   max-width: 1304px;
   margin: auto;
 }
