@@ -220,6 +220,7 @@ header a {
 .sezione-contenitore {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
   border-top: 1px solid black;
   padding-top: 38px;
   margin-top: 100px;
@@ -240,6 +241,10 @@ header a {
   text-wrap: pretty;
 }
 
+.sezione-testo h4 {
+  margin-top: 42px;
+}
+
 .sezione-paragrafo-destra .sezione-testo {
   margin-top: 15px;
   margin-right: 0px;
@@ -256,18 +261,19 @@ header a {
   justify-items: stretch;
   row-gap: 60px;
   margin-bottom: 80px;
-  gap: 20px;
+  gap: 60px;
 }
 
 .contenitore-carte .carta img {
     width: 100%;
     aspect-ratio: 1 / 1;
-    object-fit: cover; 
+    object-fit: cover;
+    margin-bottom: 13px;
 }
 
 /* Footer */
 .footer-sfondo {
-  margin-top: 50px;
+  margin-top: 100px;
   background-color: var(--giallo);
   justify-items: center;
 }
@@ -334,7 +340,7 @@ header a {
     border-left: none;
   }
 
-  .bottone { border: 1px solid var(--bianco); }
+  .bottone { border: 1px solid var(--bianco); margin-top: 30px}
   footer a { color: black; }
 }
 
