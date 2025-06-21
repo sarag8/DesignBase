@@ -204,19 +204,6 @@ header a {
   padding-left: 20px;
 }
 
-.list-card:first-child {
-  /* Il primo elemento non ha border-left */
-  border-left: none;
-  padding-left: 0;
-}
-
-/* Rimuovi border-left per gli elementi che non lo devono avere anche se non sono i primi */
-.list-card:nth-child(4),
-.list-card:nth-child(7) {
-  border-left: none;
-  padding-left: 0;
-}
-
 
 .list-contenitore .list-card p{
   color: var(--grigio-testo);
@@ -338,13 +325,6 @@ header a {
   /*bordi delle list-card in sfondo-nero*/
   .list-card {
     border-left: 1px solid var(--bianco);
-  }
-  .list-card:first-child,
-  .list-card:nth-child(4),
-  .list-card:nth-child(7),
-  .list-card:nth-child(10),
-  .list-card:nth-child(13) {
-    border-left: none;
   }
 
   .bottone { border: 1px solid var(--bianco); margin-top: 30px}
