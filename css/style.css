@@ -5,11 +5,13 @@ html {
 
 header nav ul li a:hover {
   color: var(--rosa) !important;
+  transition: all 0.3s ease;
 }
 
 .bottone:hover {
     background-color: var(--nero);
-    color: var(--bianco); 
+    color: var(--bianco);
+    transition: all 0.3s ease; 
 }
 
 /* Transizioni footer */
@@ -21,11 +23,13 @@ header nav ul li a:hover {
 /* Hover per "Chi siamo" */
 .footer-testo-sezione h6:first-child a:hover {
   transform: translateX(5px) scale(1);
+  transition: all 0.3s ease;
 }
 
 /* Hover per "Torna su" */
 .torna-su a:hover {
   transform: translateY(-5px) scale(1);
+  transition: all 0.3s ease;
 }
 
 /* Stile base per torna su */
@@ -41,6 +45,7 @@ header nav ul li a:hover {
 .carta:hover img {
   transform: scale(1.05);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
 
 /* Reset e base */
@@ -322,6 +327,7 @@ header a {
 
   header nav ul li a:hover {
   color: var(--giallo) !important;
+  transition: all 0.3s ease;
   }
 
   background-color: black;
@@ -380,18 +386,23 @@ header a {
 
 .categorie {
   display: flex;
-  max-width: 1000px;
   justify-content: space-between;
   font-size: 35px; font-weight: 500;
   color: var(--bianco);
 }
 
-.categorie a:hover {
+.categorie h2:hover {
+  transition: all 0.3s ease;
   color: var(--giallo) !important;
   text-decoration: underline;
   text-decoration-color: var(--giallo);
   text-decoration-thickness: 2px;
   text-underline-offset: 7px;
+}
+
+.contenitore .testo-hero a:hover {
+  color: #858585;
+  transition: all 0.4s ease;
 }
 
 
@@ -502,14 +513,15 @@ header a {
     font-size: 10px;
   }
 
-    .categorie {
-    flex-wrap: wrap;
-    gap: 10px 8px;
-    justify-content: flex-start;
-    max-width: 100%;
+  .categorie {
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 10px 8px;
+  justify-content: flex-start;
+  max-width: 100%;
   }
   
-  .categorie h2 {
+  .categorie h2 a {
     font-size: 16px;  /* Ancora più piccolo per stare in orizzontale */
     flex: 0 0 auto;
     line-height: 1.2;
