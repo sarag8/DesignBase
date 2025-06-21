@@ -1,4 +1,4 @@
-/* Transizioni */
+/* ===== TRANSIZIONI E ANIMAZIONI ===== */
 html {
   scroll-behavior: smooth;
 }
@@ -48,7 +48,21 @@ header nav ul li a:hover {
   transition: all 0.3s ease;
 }
 
-/* Reset e base */
+.contenitore .testo-hero a:hover {
+  color: #858585;
+  transition: all 0.4s ease;
+}
+
+.categorie h2:hover {
+  transition: all 0.3s ease;
+  color: var(--giallo) !important;
+  text-decoration: underline;
+  text-decoration-color: var(--giallo);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 7px;
+}
+
+/* ===== RESET E STILI BASE ===== */
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -64,11 +78,11 @@ body, h1, h2, h3, h4, h5, h6, p, ol, ul, a {
   font-weight: normal;
   font-family: 'Poppins', sans-serif;
   text-decoration: none;
-  color: black; 
+  color: var(--testo-tema); 
 }
 
 body {
-  background-color: var(--grigio-sfondo);
+  background-color: var(--sfondo-tema);
 }
 
 ol, ul {
@@ -80,7 +94,7 @@ img {
   height: auto;
 }
 
-/* Tipografia */
+/* ===== TIPOGRAFIA ===== */
 h1 { font-size: 60px; font-family: 'EB Garamond', serif; line-height: 70px;}
 h2 { font-size: 35px; font-weight: 500;}
 h3 { font-size: 30px; font-weight: 500;}
@@ -89,7 +103,7 @@ h5 { font-size: 18px; font-weight: 600;}
 h6 { font-size: 16px; font-weight: 400;}
 p { font-size: 18px; font-weight: 400; text-align: left; text-wrap: pretty; }
 
-/* Variabili CSS */
+/* ===== VARIABILI CSS ===== */
 :root {
   --nero: black;
   --rosa: #ff89ac; 
@@ -97,8 +111,14 @@ p { font-size: 18px; font-weight: 400; text-align: left; text-wrap: pretty; }
   --grigio-sfondo: #E2E2E2;
   --grigio-testo: #858585;
   --bianco: white;
+  
+  /* Tema chiaro (default) */
+  --sfondo-tema: var(--grigio-sfondo);
+  --testo-tema: var(--nero);
+  --bordo-tema: var(--nero);
 }
 
+/* ===== CLASSI UTILITY ===== */
 .testo-nero {color: black;}
 .testo-grigio {color: var(--grigio-testo);}
 
@@ -123,6 +143,14 @@ p { font-size: 18px; font-weight: 400; text-align: left; text-wrap: pretty; }
   display: flex;
 }
 
+.destra {
+  max-width: 662px;
+  margin-left: auto;
+  margin-right: 0;
+  margin-bottom: 70px;
+}
+
+/* ===== IMMAGINI HERO E PAGINE ===== */
 .immagine-pagina-quattro {
   width: 100vw;
   max-height: 406px;
@@ -137,15 +165,23 @@ p { font-size: 18px; font-weight: 400; text-align: left; text-wrap: pretty; }
   object-fit: cover;
 }
 
+.immagine-hero-home {
+  width: 100vw;
+  max-height: 727px;
+  margin-bottom: 70px;
+  object-fit: cover;
+}
+
+/* ===== BOTTONI ===== */
 .bottone {
   text-align: center;
   padding: 10px 28px;
-  border: 1px solid var(--nero);
+  border: 1px solid var(--bordo-tema);
   border-radius: 27px;
   max-width: 180px;
 }
 
-/* Header */
+/* ===== HEADER E NAVIGAZIONE ===== */
 header {
   background-color: transparent;
   display: flex;
@@ -169,14 +205,28 @@ header a {
   display: flex;
 }
 
-.immagine-hero-home {
-  width: 100vw;
-  max-height: 727px;
-  margin-bottom: 70px;
-  object-fit: cover;
+/* Stili specifici per header delle diverse pagine */
+.testo-header-basi li:nth-child(1) a {
+  color: var(--bianco) !important;
 }
 
-/* Prima parte */
+.testo-header-risorse li:nth-child(3) a { 
+  color: var(--bianco) !important;
+}
+
+.testo-header-fondamenti li:nth-child(2) a {
+  color:var(--nero) !important;
+}
+
+.testo-header-carriera li:nth-child(4) a {
+  color:var(--nero) !important;
+}
+
+.testo-header-chisiamo li:last-child a {
+  color:var(--bianco) !important;
+}
+
+/* ===== SEZIONI HERO E TESTO PRINCIPALE ===== */
 .testo-hero {
   max-width: 1100px;
   align-content: start;
@@ -198,23 +248,40 @@ header a {
   margin-bottom: 1.5rem;
 }
 
-/* Card con pallino */
-.list-card {
-  border-left: 1px solid var(--nero);
-  padding-left: 20px;
+/* Stili per pagine specifiche */
+.titolo-doppio-pagine {
+  max-width: 720px;
+  align-content: start;
+  margin-bottom: 50px;
 }
 
+.testo-hero-pagine:first-child {
+  color:var(--grigio-testo)
+}
+
+/* ===== LISTE E CARD CON PALLINO ===== */
+.list-card {
+  border-left: 1px solid var(--bordo-tema);
+  padding-left: 20px;
+}
 
 .list-contenitore .list-card p{
   color: var(--grigio-testo);
 }
 
-/* Sezione contenitore */
+.list-contenitore {
+  gap: 80px 30px;
+  margin: 90px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ===== SEZIONI CONTENITORE ===== */
 .sezione-contenitore {
   display: flex;
   justify-content: space-between;
   gap: 20px;
-  border-top: 1px solid black;
+  border-top: 1px solid var(--bordo-tema);
   padding-top: 38px;
   margin-top: 100px;
   margin-bottom: 50px;
@@ -245,7 +312,7 @@ header a {
   margin-bottom: 70px;
 }
 
-/* Carta */
+/* ===== CONTENITORE CARTE ===== */
 .contenitore-carte {
   margin: auto;
   max-width: 1324px;
@@ -264,7 +331,30 @@ header a {
     margin-bottom: 13px;
 }
 
-/* Footer */
+/* ===== GRID IMMAGINI ===== */
+.grid-immagini-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px 20px;
+  margin-bottom: 100px;
+}
+
+.grid-immagini-container-due {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px 20px;
+  margin-bottom: 100px;
+}
+
+/* ===== CATEGORIE ===== */
+.categorie {
+  display: flex;
+  justify-content: space-between;
+  font-size: 35px; font-weight: 500;
+  color: var(--bianco);
+}
+
+/* ===== FOOTER ===== */
 .footer-sfondo {
   margin-top: 100px;
   background-color: var(--giallo);
@@ -282,109 +372,25 @@ header a {
   padding-bottom: 60px;
 }
 
-
-/* Pagina Basi */
-.titolo-doppio-pagine {
-  max-width: 720px;
-  align-content: start;
-  margin-bottom: 50px;
-}
-
-.testo-hero-pagine:first-child {
-  color:var(--grigio-testo)
-}
-
-.testo-header-basi li:nth-child(1) a {
-  color: var(--bianco) !important;
-}
-
-
-/* Pagina Risorse */
-.testo-header-risorse li:nth-child(3) a { color: var(--bianco) !important;}
-
-.list-contenitore {
-  gap: 80px 30px;
-  margin: 90px 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
-/* Tema Sfondo Nero */
+/* ===== TEMA SFONDO NERO ===== */
 .sfondo-nero {
+  --sfondo-tema: var(--nero);
+  --testo-tema: var(--bianco);
+  --bordo-tema: var(--bianco);
+}
 
-  header nav ul li a:hover {
+.sfondo-nero header nav ul li a:hover {
   color: var(--giallo) !important;
   transition: all 0.3s ease;
-  }
-
-  background-color: black;
-
-  body, h1, h2, h3, h4, h5, p, ol, ul, a, h5 { color: var(--bianco); }
-  .sezione-contenitore { border-top: 1px solid var(--bianco); }
-
-  /*bordi delle list-card in sfondo-nero*/
-  .list-card {
-    border-left: 1px solid var(--bianco);
-  }
-
-  .bottone { border: 1px solid var(--bianco); margin-top: 30px}
-  footer a { color: black; }
 }
 
-.destra {
-  max-width: 662px;
-  margin-left: auto;
-  margin-right: 0;
-  margin-bottom: 70px;
+.sfondo-nero .bottone { 
+  margin-top: 30px;
 }
 
-.grid-immagini-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 60px 20px;
-  margin-bottom: 100px;
+.sfondo-nero footer a,h6 { 
+  color: black; 
 }
-
-.grid-immagini-container-due {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 60px 20px;
-  margin-bottom: 100px;
-}
-
-.testo-header-fondamenti li:nth-child(2) a {
-  color:var(--nero) !important;
-}
-
-.testo-header-carriera li:nth-child(4) a {
-  color:var(--nero) !important;
-}
-
-.testo-header-chisiamo li:last-child a {
-  color:var(--bianco) !important;
-}
-
-.categorie {
-  display: flex;
-  justify-content: space-between;
-  font-size: 35px; font-weight: 500;
-  color: var(--bianco);
-}
-
-.categorie h2:hover {
-  transition: all 0.3s ease;
-  color: var(--giallo) !important;
-  text-decoration: underline;
-  text-decoration-color: var(--giallo);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 7px;
-}
-
-.contenitore .testo-hero a:hover {
-  color: #858585;
-  transition: all 0.4s ease;
-}
-
 
 @media (max-width: 600px) {
   .contenitore-header {
@@ -445,7 +451,7 @@ header a {
 
   /* bordo inferiore a tutti i list-card TRANNE l'ultimo */
   .list-contenitore .list-card:not(:last-child) {
-    border-bottom: 1px solid var(--nero);
+    border-bottom: 1px solid var(--bordo-tema);
     padding-bottom: 20px;
   }
 
@@ -455,17 +461,9 @@ header a {
     padding-bottom: 0;
   }
 
-  .sfondo-nero {
-    .list-contenitore .list-card:not(:last-child) {
-      border-bottom: 1px solid var(--bianco);
-    }
-
-  .list-card { 
+  .sfondo-nero .list-card { 
     border-left: none;
-    }
-
   }
-
 
   .contenitore-carte {
     grid-template-columns: 1fr;
